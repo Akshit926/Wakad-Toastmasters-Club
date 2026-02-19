@@ -502,3 +502,171 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ============================================
+   RESPONSIVE STYLES — Add to bottom of style.css
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* --- NAVBAR --- */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 5%;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 0.85rem;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    height: auto;
+    min-height: 80vh;
+    padding: 60px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-main,
+  .btn-sub {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 13px 20px;
+  }
+
+  /* --- ABOUT US --- */
+  .about-us {
+    padding: 60px 5%;
+  }
+
+  .about-header h2 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* --- MISSION / MEETING INFO --- */
+  .about-section {
+    padding: 50px 5%;
+  }
+
+  .container-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mission-card {
+    padding: 25px;
+  }
+
+  .mission-card p {
+    font-size: 1.05rem;
+  }
+
+  /* --- EXCOM / LEADERS --- */
+  .excom-section {
+    padding: 60px 5%;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .excom-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .leader-card {
+    padding: 20px 10px;
+  }
+
+  .leader-card h3 {
+    font-size: 0.9rem;
+  }
+
+  /* --- CONTACT --- */
+  .contact-area {
+    padding: 60px 5%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-form {
+    padding: 25px 18px;
+  }
+
+  /* --- FOOTER --- */
+  .footer {
+    padding: 25px 5%;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-story h3,
+  .about-offer h3 {
+    font-size: 1.4rem;
+  }
+
+  .excom-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-text h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .info-btn {
+    padding: 12px;
+    gap: 10px;
+  }
+}
