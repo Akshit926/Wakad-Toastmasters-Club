@@ -643,10 +643,8 @@ body {
 @media (max-width: 768px) {
 
 .hero {
-    height: auto;
-    min-height: 60vh;       
-    padding: 40px 5%;
-    background-position: center 30%;  
-    background-size: cover;
+    height: 60vh;
+    min-height: unset;
+    background-position: center 40%;
 }
 }
