@@ -1,3 +1,8 @@
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 :root {
     --maroon: #772432;
     --blue: #004165;
@@ -495,79 +500,5 @@ body {
 @media (max-width: 900px) {
     .about-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-/* ============================= */
-/* RESPONSIVE ADDITIONS ONLY     */
-/* ============================= */
-
-/* Responsive logo image */
-.logo-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Hero section responsive fix */
-@media (max-width: 768px) {
-    .hero {
-        min-height: 70vh;
-        padding: 60px 20px;
-        background-position: top;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 0.95rem;
-    }
-
-    .hero-btns a {
-        display: block;
-        margin: 12px auto;
-    }
-}
-
-/* Navbar responsiveness */
-@media (max-width: 900px) {
-    .navbar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px 5%;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links a {
-        margin: 8px 12px;
-    }
-}
-
-/* About section responsive */
-@media (max-width: 900px) {
-    .container-flex {
-        flex-direction: column;
-    }
-}
-
-/* Contact section responsive */
-@media (max-width: 900px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-/* Footer text responsive */
-@media (max-width: 600px) {
-    .footer {
-        padding: 25px 15px;
-        font-size: 0.75rem;
     }
 }
