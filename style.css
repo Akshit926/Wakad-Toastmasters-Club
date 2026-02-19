@@ -640,36 +640,13 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
-  .hero-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .about-header h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-story h3,
-  .about-offer h3 {
-    font-size: 1.4rem;
-  }
-
-  .excom-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .section-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact-text h2 {
-    font-size: 1.6rem !important;
-  }
-
-  .info-btn {
-    padding: 12px;
-    gap: 10px;
-  }
+.hero {
+    height: auto;
+    min-height: 60vh;       
+    padding: 40px 5%;
+    background-position: center 30%;  
+    background-size: cover;
 }
-
+}
