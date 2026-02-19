@@ -534,6 +534,8 @@ body {
     height: auto;
     min-height: 80vh;
     padding: 60px 5%;
+    background-position: top center;  /* Show top of image (faces) instead of cutting */
+    background-size: cover;
   }
 
   .hero-content h1 {
@@ -670,3 +672,4 @@ body {
     gap: 10px;
   }
 }
+
