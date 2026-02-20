@@ -1,309 +1,774 @@
-<!DOCTYPE html>
-<html lang="en">
+:root {
+    --maroon: #772432;
+    --blue: #004165;
+    --accent: #ffcc00;
+    --light-bg: #f9f9f9;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wakad Toastmasters | Area C2 | District 125</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-<body>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    line-height: 1.6;
+}
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="brand">
-            <img src="tm-logo.png" alt="TM Logo" class="logo-img">
-            <div class="brand-text">
-                <span class="club-name">Wakad Toastmasters</span>
-                <span class="sub-text">Area C2 | District 125</span>
-            </div>
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#excom">Leaders</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <!-- HERO -->
-    <header class="hero" id="home">
-        <div class="hero-content">
-            <h1>Own Your <span>Confidence.</span></h1>
-            <p>Master public speaking and leadership in a supportive community in Wakad, Pune.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn-main">Visit a Meeting</a>
-                <a href="#about" class="btn-sub">Learn More</a>
-            </div>
-        </div>
-    </header>
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-    <!-- ABOUT US -->
-    <section class="about-us" id="about">
-        <div class="about-header">
-            <h2>About Us</h2>
-            <p>Wakad Toastmasters Club is a vibrant community of aspiring speakers and leaders located in the heart of
-                Wakad, Pune.</p>
-        </div>
-        <div class="about-grid">
-            <div class="about-story">
-                <h3>Our Story</h3>
-                <p>Founded with a vision to help individuals overcome their fear of public speaking, our club has grown
-                    into a supportive community where members practice communication and leadership skills in a safe,
-                    encouraging environment.</p>
-                <p>We meet regularly in Wakad to share ideas, give speeches, receive constructive feedback, and
-                    celebrate each other's growth. Whether you're preparing for a presentation, improving your interview
-                    skills, or simply want to become a more confident communicator, we're here to help.</p>
-            </div>
-            <div class="about-offer">
-                <h3>What We Offer</h3>
-                <div class="offer-item">
-                    <span class="offer-icon">🎯</span>
-                    <div>
-                        <h4>Structured Learning</h4>
-                        <p>Follow the Toastmasters Pathways program with personalized learning tracks.</p>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <span class="offer-icon">🤝</span>
-                    <div>
-                        <h4>Supportive Environment</h4>
-                        <p>Practice in a friendly atmosphere with constructive feedback.</p>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <span class="offer-icon">📈</span>
-                    <div>
-                        <h4>Personal Growth</h4>
-                        <p>Build confidence, leadership, and communication skills.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
 
-    <!-- MISSION + MEETING INFO -->
-    <section class="about-section">
-        <div class="container-flex">
-            <div class="mission-card">
-                <span class="label">Club Mission</span>
-                <p>"We provide a supportive and positive learning experience in which members are empowered to develop
-                    oral communication and leadership skills."</p>
-            </div>
-            <div class="meeting-info-grid">
-                <div class="info-btn">
-                    <span class="icon">📅</span>
-                    <div><strong>Saturdays</strong>
-                        <p>Weekly Meeting</p>
-                    </div>
-                </div>
-                <div class="info-btn">
-                    <span class="icon">⏰</span>
-                    <div><strong>5:00 PM</strong>
-                        <p>Meeting Time</p>
-                    </div>
-                </div>
-                <a href="https://maps.app.goo.gl/KamalPratishthanWakad" target="_blank" class="info-btn highlight-btn">
-                    <span class="icon">📍</span>
-                    <div><strong>Mount Litera Zee School</strong>
-                        <p>Kaspate Wasti, Wakad</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+.club-name {
+    display: block;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    color: var(--blue);
+    font-size: 1.1rem;
+}
 
-    <!-- LEADERS / EXCOM -->
-    <section class="excom-section" id="excom">
-        <div class="section-header">
-            <span class="label">The Team</span>
-            <h2>Meet Our Leaders</h2>
-        </div>
-        <div class="excom-grid">
-            <div class="leader-card">
-                <div class="avatar">S</div>
-                <h3>TM Sandeep</h3>
-                <span class="role">President</span>
-            </div>
-            <div class="leader-card">
-                <div class="avatar">K</div>
-                <h3>TM Krushna</h3>
-                <span class="role">VP Education</span>
-            </div>
-            <div class="leader-card">
-                <div class="avatar">D</div>
-                <h3>TM Dinesh Choudhri</h3>
-                <span class="role">VP Membership</span>
-            </div>
-            <div class="leader-card">
-                <div class="avatar">V</div>
-                <h3>TM Vaibhav Singh Chohan</h3>
-                <span class="role">Secretary</span>
-            </div>
-            <div class="leader-card">
-                <div class="avatar">P</div>
-                <h3>TM Punit Hadani</h3>
-                <span class="role">Treasurer</span>
-            </div>
-            <div class="leader-card">
-                <div class="avatar">S</div>
-                <h3>TM Sugeesh Sugathan</h3>
-                <span class="role">VP Public Relations</span>
-            </div>
-            <div class="leader-card">
-                <div class="avatar">S</div>
-                <h3>TM Shashank Agarwal</h3>
-                <span class="role">Sergeant At Arms</span>
-            </div>
-        </div>
-    </section>
+.sub-text {
+    font-size: 0.7rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-    <!-- FAQ -->
-    <section class="faq-section" id="faq">
-        <div class="faq-header">
-            <span class="label">Got Questions?</span>
-            <h2>Frequently Asked Questions</h2>
-            <p>Everything you need to know before visiting your first meeting.</p>
-        </div>
-        <div class="faq-container">
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Do I need any experience to join?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Not at all! Toastmasters is designed for everyone — from complete beginners to seasoned speakers.
-                        Your first few meetings are just about observing and getting comfortable. You speak only when
-                        you're ready.</p>
-                </div>
-            </div>
+.nav-links a:hover {
+    color: var(--maroon);
+}
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Can I attend a meeting as a guest before joining?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Absolutely! Guests are always welcome at our meetings. You can attend up to 2 meetings for free
-                        before deciding to become a member. It's the best way to see if Toastmasters is right for you.
-                    </p>
-                </div>
-            </div>
+.hero {
+    height: 85vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(0, 65, 101, 0.75), rgba(119, 36, 50, 0.7)),
+        url('grp_img.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>When and where do you meet?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>We meet every <strong>Saturday at 5:00 PM</strong> at <strong>Mount Litera Zee School, Kaspate
-                            Wasti, Wakad, Pune</strong>. Meetings typically last around 1.5 to 2 hours.</p>
-                </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>What happens at a typical meeting?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>A typical meeting includes prepared speeches, impromptu speaking (Table Topics), evaluations, and
-                        leadership roles. Every meeting is structured, fun, and packed with learning. Each member gets a
-                        chance to speak and receive constructive feedback.</p>
-                </div>
-            </div>
+.btn-main {
+    background: var(--maroon);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 15px;
+    display: inline-block;
+    transition: 0.3s;
+}
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>How much does membership cost?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Membership fees include a one-time registration fee and semi-annual Toastmasters International
-                        dues. Please contact our President or VP Membership for the current fee structure. The
-                        investment is minimal compared to the lifelong skills you gain.</p>
-                </div>
-            </div>
+.btn-main:hover {
+    background: #5c1a24;
+}
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>What is the Pathways program?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Pathways is Toastmasters' online learning program with 11 different paths tailored to your goals
-                        — whether it's leadership, communication, or a specific career skill. You progress at your own
-                        pace and earn certificates along the way.</p>
-                </div>
-            </div>
+.btn-sub {
+    border: 2px solid white;
+    color: white;
+    padding: 13px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Is the club only for professionals?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Not at all! Our members include students, homemakers, entrepreneurs, working professionals, and
-                        retirees. Anyone who wants to improve their communication and leadership skills is welcome.</p>
-                </div>
-            </div>
+.btn-sub:hover {
+    background: rgba(255,255,255,0.1);
+}
 
-        </div>
-    </section>
+.about-us {
+    padding: 100px 8%;
+    background: var(--light-bg);
+}
 
-    <!-- CONTACT -->
-    <section class="contact-area" id="contact">
-        <div class="contact-grid">
-            <div class="contact-text">
-                <span class="label">Get In Touch</span>
-                <h2>Connect With Us</h2>
-                <p>We'd love to have you visit a meeting. Reach out to our leaders or drop us a message below.</p>
-                <p>
-                    <strong>Meeting Venue:</strong><br />
-                    <a class="map-link" href="https://maps.google.com" target="_blank">Mount Litera Zee School
-                        📍</a><br />
-                    Kaspate Wasti, Wakad, Pune
-                </p>
-                <div class="officers">
-                    <div class="officer-item">
-                        <div class="officer-icon">📱</div>
-                        <div class="officer-info">
-                            <a href="tel:+917710085710">TM Sandeep</a>
-                            <small>President | +91 77100 85710</small>
-                        </div>
-                    </div>
-                    <div class="officer-item">
-                        <div class="officer-icon">📱</div>
-                        <div class="officer-info">
-                            <a href="tel:+917385297121">TM Krushna</a>
-                            <small>VP-Education | +91 73852 97121</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="district-badge">
-                    🌐 TM International District 125 — Empowering communicators across Maharashtra
-                </div>
-            </div>
-            <div class="contact-form">
-                <h3>Message the Club</h3>
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Email Address" />
-                <input type="text" placeholder="Subject" />
-                <textarea placeholder="Your message..."></textarea>
-                <button type="button">Send Message</button>
-            </div>
-        </div>
-    </section>
+.about-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2026 <span>Wakad Toastmasters Club</span> | Area C2, District 125 | Where Leaders are Made</p>
-    </footer>
+.about-header h2 {
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
 
-    <script src="script.js"></script>
-</body>
+.about-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
 
-</html>
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.about-story h3,
+.about-offer h3 {
+    font-family: 'Montserrat';
+    font-size: 1.8rem;
+    color: var(--maroon);
+    margin-bottom: 20px;
+}
+
+.about-story p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.offer-item {
+    display: flex;
+    gap: 15px;
+    padding: 18px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.offer-item:hover {
+    transform: translateX(6px);
+    border-color: var(--blue);
+}
+
+.offer-icon {
+    font-size: 1.5rem;
+}
+
+.offer-item h4 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--blue);
+}
+
+.offer-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.about-section {
+    padding: 80px 8%;
+    background: #fff;
+}
+
+.container-flex {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.mission-card {
+    flex: 1.2;
+    background: var(--light-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--maroon);
+}
+
+.label {
+    color: var(--maroon);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.mission-card p {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: 15px;
+    color: #333;
+}
+
+.meeting-info-grid {
+    flex: 0.8;
+    display: grid;
+    gap: 15px;
+}
+
+.info-btn {
+    background: var(--light-bg);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+.info-btn:hover {
+    transform: translateX(5px);
+    border-color: var(--blue);
+}
+
+.highlight-btn {
+    background: var(--blue);
+    color: white;
+    border: none;
+}
+
+.highlight-btn strong {
+    color: var(--accent);
+}
+
+.excom-section {
+    padding: 100px 8%;
+    text-align: center;
+    background: var(--light-bg);
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Montserrat';
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.excom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leader-card {
+    background: #fff;
+    padding: 30px 15px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--maroon);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.leader-card h3 {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.role {
+    display: block;
+    color: var(--maroon);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.faq-section {
+    padding: 100px 8%;
+    background: #fff;
+}
+
+.faq-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.faq-header h2 {
+    font-family: 'Montserrat';
+    font-size: 2.8rem;
+    color: var(--blue);
+    margin: 10px 0 15px;
+}
+
+.faq-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: var(--light-bg);
+    border-radius: 12px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.faq-item.open {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    border-color: var(--blue);
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    gap: 15px;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: var(--blue);
+}
+
+.faq-item.open .faq-question {
+    color: var(--blue);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--maroon);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 25px;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 0 25px 20px;
+}
+
+.faq-answer p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 15px;
+}
+
+.contact-area {
+    padding: 90px 8%;
+    background: var(--light-bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.contact-text h2 {
+    font-family: 'Montserrat';
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--blue);
+    margin-bottom: 18px;
+}
+
+.contact-text p {
+    color: #555;
+    margin-bottom: 22px;
+    font-size: 0.97rem;
+}
+
+.map-link {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--blue);
+}
+
+.officers {
+    margin-top: 22px;
+}
+
+.officer-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.officer-item:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+}
+
+.officer-icon {
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.officer-info a {
+    color: var(--maroon);
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+}
+
+.officer-info small {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.district-badge {
+    margin-top: 22px;
+    padding: 14px 18px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: #555;
+    border: 1px solid #eee;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 38px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+}
+
+.contact-form h3 {
+    font-family: 'Montserrat';
+    font-size: 1.3rem;
+    color: var(--blue);
+    margin-bottom: 22px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.93rem;
+    transition: 0.2s;
+    outline: none;
+    background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--blue);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.contact-form button {
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.contact-form button:hover {
+    background: var(--maroon);
+}
+
+.footer {
+    text-align: center;
+    padding: 38px;
+    border-top: 1px solid #eee;
+    color: #aaa;
+    font-size: 0.82rem;
+}
+
+.footer span {
+    color: var(--maroon);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 5%;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        height: 50vh;
+        min-height: unset;
+        background-position: center 15%;
+    }
+
+    .hero-content {
+        padding: 20px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .btn-main,
+    .btn-sub {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 13px 20px;
+    }
+
+    .about-us {
+        padding: 60px 5%;
+    }
+
+    .about-header h2 {
+        font-size: 2rem;
+    }
+
+    .about-header p {
+        font-size: 1rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-section {
+        padding: 50px 5%;
+    }
+
+    .container-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mission-card {
+        padding: 25px;
+    }
+
+    .mission-card p {
+        font-size: 1.05rem;
+    }
+
+    .excom-section {
+        padding: 60px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .excom-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    .leader-card {
+        padding: 20px 10px;
+    }
+
+    .leader-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .faq-section {
+        padding: 60px 5%;
+    }
+
+    .faq-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .faq-question {
+        font-size: 0.92rem;
+        padding: 16px 18px;
+    }
+
+    .faq-answer {
+        padding: 0 18px;
+    }
+
+    .faq-item.open .faq-answer {
+        padding: 0 18px 16px;
+    }
+
+    .contact-area {
+        padding: 60px 5%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-form {
+        padding: 25px 18px;
+    }
+
+    .footer {
+        padding: 25px 5%;
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-story h3,
+    .about-offer h3 {
+        font-size: 1.4rem;
+    }
+
+    .excom-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-text h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .info-btn {
+        padding: 12px;
+        gap: 10px;
+    }
+}
